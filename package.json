@@ -1,6 +1,6 @@
 {
   "name": "@goldlabelapps/virus",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Minimal package for verifying build and publish workflows.",
   "scripts": {
     "build": "node scripts/build.js",
