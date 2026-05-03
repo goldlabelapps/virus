@@ -1,0 +1,1 @@
+The **Virus°** concept in this codebase represents a modular, interactive, and data-driven simulation of a virus and its spread, designed for use in a Next.js/React application. It is not a literal biological virus, but a metaphorical or gamified construct, possibly for educational, entertainment, or experimental purposes.
