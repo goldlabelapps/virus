@@ -21,7 +21,7 @@ yarn add @goldlabelapps/virus
 import { renderPackageInfo } from '@goldlabelapps/virus';
 
 console.log(renderPackageInfo());
-// @goldlabelapps/virus v1.0.2
+// @goldlabelapps/virus v1.0.3
 ```
 
 #### API
@@ -34,7 +34,7 @@ console.log(renderPackageInfo());
 `PACKAGE_VERSION`
 
 - Type: `string`
-- Value: current package version (for example `1.0.2`)
+- Value: current package version (for example `1.0.3`)
 
 #### `renderPackageInfo()`
 
