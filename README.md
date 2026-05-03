@@ -1,19 +1,21 @@
-# @goldlabelapps/virus
+## npmjs.com/@goldlabelapps/virus
 
 > Minimal package used to verify build and publish workflows.
-
-[![npm version](https://img.shields.io/npm/v/@goldlabelapps/virus)](https://www.npmjs.com/package/@goldlabelapps/virus)
 
 [![SVG](https://shieldcn.dev/npm/@goldlabelapps/virus.svg)](https://www.npmjs.com/package/@goldlabelapps/virus)
 
 
-## Installation
+#### Installation
 
 ```bash
+# npm
 npm i @goldlabelapps/virus
+
+# yarn
+yarn add @goldlabelapps/virus
 ```
 
-## Quick start
+#### Quick start
 
 ```js
 import { renderPackageInfo } from '@goldlabelapps/virus';
@@ -22,39 +24,22 @@ console.log(renderPackageInfo());
 // @goldlabelapps/virus v1.0.2
 ```
 
-## API
+#### API
 
-### `PACKAGE_NAME`
+`PACKAGE_NAME`
 
 - Type: `string`
 - Value: `@goldlabelapps/virus`
 
-### `PACKAGE_VERSION`
+`PACKAGE_VERSION`
 
 - Type: `string`
 - Value: current package version (for example `1.0.2`)
 
-### `renderPackageInfo()`
+#### `renderPackageInfo()`
 
 - Returns: `string`
 - Format: `<package-name> v<package-version>`
-
-## Development
-
-```bash
-# Build (ESM + CJS)
-npm run build
-
-# Test (Node built-in test runner)
-npm test
-```
-
-## Publishing
-
-```bash
-npm run build
-npm publish --access public
-```
 
 ## License
 
