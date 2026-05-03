@@ -1,0 +1,9 @@
+{
+    "nx": {
+        "npmScope": "nx",
+        "affected": {
+            "defaultBase": "main"
+        }
+    },
+    "version": "1.0.0"
+}
