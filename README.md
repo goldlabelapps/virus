@@ -3,7 +3,9 @@
 > Minimal package used to verify build and publish workflows.
 
 [![npm version](https://img.shields.io/npm/v/@goldlabelapps/virus)](https://www.npmjs.com/package/@goldlabelapps/virus)
-[![license](https://img.shields.io/npm/l/@goldlabelapps/virus)](./LICENSE)
+
+[![SVG](https://shieldcn.dev/npm/@goldlabelapps/virus.svg)](https://www.npmjs.com/package/@goldlabelapps/virus)
+
 
 ## Installation
 
