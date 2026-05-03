@@ -1,10 +1,15 @@
 /**
- * @goldlabelapps/virus
+ * Minimal workflow verification output.
  *
- * A modular, interactive, data-driven simulation of a virus and its spread,
- * designed for use in Next.js / React applications.
+ * Exposes the package metadata as text so consuming apps can validate
+ * end-to-end install/build/import/publish flow.
  */
 
-export { Virus } from './Virus.js';
-export { Population } from './Population.js';
-export { Simulation } from './Simulation.js';
+import pkg from '../package.json' with { type: 'json' };
+
+export const PACKAGE_NAME = pkg.name;
+export const PACKAGE_VERSION = pkg.version;
+
+export function renderPackageInfo() {
+	return `${PACKAGE_NAME} v${PACKAGE_VERSION}`;
+}

@@ -1,11 +1,9 @@
 /**
  * Minimal build script using Node.js built-ins.
  *
- * Concatenates all source files into:
- *   dist/index.js   – ESM bundle
- *   dist/index.cjs  – CommonJS bundle
- *
- * For a production package you would replace this with esbuild / tsup / rollup.
+ * Copies the package entrypoint to:
+ *   dist/index.js   - ESM build
+ *   dist/index.cjs  - CommonJS build
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
@@ -17,30 +15,19 @@ const distDir = join(__dirname, '..', 'dist');
 
 mkdirSync(distDir, { recursive: true });
 
-// Build in dependency order; index.js is handled separately (re-exports only).
-const order = ['Virus.js', 'Population.js', 'Simulation.js'];
+const entrySource = readFileSync(join(srcDir, 'index.js'), 'utf8').trimEnd();
 
-let esmParts = [];
-const exportedNames = [];
-
-for (const file of order) {
-  let content = readFileSync(join(srcDir, file), 'utf8');
-  // Remove inter-file import statements (they are inlined).
-  content = content.replace(/^import .+ from '\.\/.*';\n?/gm, '');
-  // Collect exported class / function / const names.
-  for (const m of content.matchAll(/^export (?:class|function|const|let|var) (\w+)/gm)) {
-    exportedNames.push(m[1]);
-  }
-  esmParts.push(content.trimEnd());
-}
-
-// ── ESM bundle ──────────────────────────────────────────────────────────────
-const esmBundle = esmParts.join('\n\n') + '\n';
+// ESM bundle
+const esmBundle = `${entrySource}\n`;
 writeFileSync(join(distDir, 'index.js'), esmBundle, 'utf8');
 
-// ── CJS bundle ───────────────────────────────────────────────────────────────
-// Strip `export` keywords from declarations so they are plain identifiers,
-// then add a single module.exports at the bottom.
+// CommonJS bundle: strip `export` keywords from declarations and
+// collect exported symbol names for module.exports.
+const exportedNames = [];
+for (const m of esmBundle.matchAll(/^export (?:class|function|const|let|var) (\w+)/gm)) {
+  exportedNames.push(m[1]);
+}
+
 let cjsBundle = esmBundle.replace(/^export (class|function|const|let|var) /gm, '$1 ');
 cjsBundle += `\nmodule.exports = { ${[...new Set(exportedNames)].join(', ')} };\n`;
 writeFileSync(join(distDir, 'index.cjs'), cjsBundle, 'utf8');
