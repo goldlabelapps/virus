@@ -1,6 +1,6 @@
 {
   "name": "@goldlabelapps/virus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Minimal package for verifying build and publish workflows.",
   "scripts": {
     "build": "node scripts/build.js",
@@ -10,7 +10,12 @@
     "release:minor": "npm test && npm version minor && npm publish",
     "release:major": "npm test && npm version major && npm publish"
   },
-  "keywords": ["workflow", "verification", "package", "npm"],
+  "keywords": [
+    "workflow",
+    "verification",
+    "package",
+    "npm"
+  ],
   "homepage": "https://github.com/goldlabelapps/virus#readme",
   "bugs": {
     "url": "https://github.com/goldlabelapps/virus/issues"
