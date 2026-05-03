@@ -1,7 +1,15 @@
 {
   "name": "@goldlabelapps/virus",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "A modular, interactive, data-driven virus spread simulation for Next.js/React applications.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test",
+    "prepublishOnly": "npm run build",
+    "release:patch": "npm test && npm version patch && npm publish",
+    "release:minor": "npm test && npm version minor && npm publish",
+    "release:major": "npm test && npm version major && npm publish"
+  },
   "keywords": ["virus", "simulation", "spread", "react", "nextjs", "gamification"],
   "homepage": "https://github.com/goldlabelapps/virus#readme",
   "bugs": {
@@ -27,11 +35,6 @@
     "README.md",
     "LICENSE"
   ],
-  "scripts": {
-    "build": "node scripts/build.js",
-    "test": "node --test",
-    "prepublishOnly": "npm run build"
-  },
   "publishConfig": {
     "access": "public"
   },

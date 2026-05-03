@@ -7,8 +7,6 @@ The **Virus** concept is a metaphorical / gamified construct for educational, en
 [![npm version](https://img.shields.io/npm/v/@goldlabelapps/virus)](https://www.npmjs.com/package/@goldlabelapps/virus)
 [![license](https://img.shields.io/npm/l/@goldlabelapps/virus)](./LICENSE)
 
----
-
 ## Installation
 
 ```bash
@@ -75,4 +73,4 @@ npm publish --access public
 
 ## License
 
-[MIT](./LICENSE) (c) goldlabelapps
+[MIT](./LICENSE) (c) Goldlabel°
