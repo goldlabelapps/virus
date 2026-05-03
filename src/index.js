@@ -5,8 +5,10 @@
  * end-to-end install/build/import/publish flow.
  */
 
-export const PACKAGE_NAME = '@goldlabelapps/virus';
-export const PACKAGE_VERSION = '1.0.1';
+import pkg from '../package.json' with { type: 'json' };
+
+export const PACKAGE_NAME = pkg.name;
+export const PACKAGE_VERSION = pkg.version;
 
 export function renderPackageInfo() {
 	return `${PACKAGE_NAME} v${PACKAGE_VERSION}`;

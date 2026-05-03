@@ -17,7 +17,7 @@ npm i @goldlabelapps/virus
 import { renderPackageInfo } from '@goldlabelapps/virus';
 
 console.log(renderPackageInfo());
-// @goldlabelapps/virus v1.0.1
+// @goldlabelapps/virus v1.0.2
 ```
 
 ## API
@@ -30,7 +30,7 @@ console.log(renderPackageInfo());
 ### `PACKAGE_VERSION`
 
 - Type: `string`
-- Value: `1.0.1`
+- Value: current package version (for example `1.0.2`)
 
 ### `renderPackageInfo()`
 
