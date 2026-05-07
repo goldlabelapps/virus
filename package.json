@@ -1,6 +1,6 @@
 {
   "name": "@goldlabelapps/virus",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Minimal package for verifying build and publish workflows.",
   "scripts": {
     "build": "node scripts/build.js",
@@ -20,8 +20,10 @@
   "author": "goldlabelapps",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
