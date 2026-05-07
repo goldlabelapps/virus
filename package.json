@@ -1,7 +1,7 @@
 {
   "name": "@goldlabelapps/virus",
-  "version": "1.1.0",
-  "description": "Minimal package for verifying build and publish workflows.",
+  "version": "1.2.0",
+  "description": "Drop in Virus° package for JavaScript. Requires MUI",
   "scripts": {
     "build": "node scripts/build.js",
     "test": "node --test",
